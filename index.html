@@ -6,13 +6,11 @@
     <title>Love Box</title>
     <style>
         .box-love {
-    background-image: url('https://drive.google.com/uc?id=1Ed7VWXWHztwYipg8o0cnARXDjgXcpSz8');
-    width: 500px;
-    height: 300px;
-    position: relative;
-    background-size: cover;
-}
-
+            background: url('https://drive.google.com/uc?id=1Ed7VWXWHztwYipg8o0cnARXDjgXcpSz8');
+            width: 500px;
+            height: 300px;
+            position: relative;
+            background-size: cover;
         }
         .box {
             position: absolute;
@@ -79,10 +77,9 @@
                 no_love.classList.remove('move');
                 var randomX = Math.floor(Math.random() * 400);
                 var randomY = Math.floor(Math.random() * 200);
-                no_love.style.transform = `translate(${randomX}px, ${randomY}px)`;
+                no_love.style.transform = translate(${randomX}px, ${randomY}px);
             }, 10);
         }
     </script>
 </body>
 </html>
-
