@@ -22,6 +22,10 @@
             background: rgba(255, 255, 255, 0.8); /* Xóa khung trắng */
             padding: 20px;
             border-radius: 10px;
+            position: relative;
+            width: 300px; /* Đặt kích thước cho khung */
+            height: 200px; /* Đặt kích thước cho khung */
+            overflow: hidden; /* Giữ nút bên trong khung */
         }
         button {
             border: none;
@@ -33,6 +37,7 @@
             text-transform: uppercase;
             font-weight: bold;
             margin: 5px;
+            position: absolute;
         }
         button:hover {
             cursor: pointer;
@@ -48,40 +53,38 @@
             font-weight: bold;
         }
         .move {
-            transform: translate(-200%, -200%);
-            transition: 0.01s;
+            transform: translate(0, 0);
+            transition: transform 0.1s;
         }
     </style>
 </head>
 <body>
     <div class="box">
-        <span>Chúc Mừng Sinh Nhật Chị Ngân</span>
-        <div>
-            <button id="love">A. Không Cảm Ơn</button>
-            <button id="no-love">B. Cảm Ơn Em Rất Nhiều</button>
-        </div>
+        <span>Chúc Chị Ngân Sinh Nhật Vui Vẻ</span>
+        <button id="love">A. Không Cảm Ơn</button>
+        <button id="no-love">B. Cảm Ơn Em Nhiều</button>
     </div>
 
     <script>
         var love = document.getElementById("love");
         var no_love = document.getElementById("no-love");
+        var box = document.querySelector('.box');
 
         love.addEventListener("click", myFunction);
 
         function myFunction() {
-            alert('Sao chị làm vậy huhuhuhu');
+            alert('Sao chị làm vậy huhuhu');
         }
 
         no_love.addEventListener("mouseover", loveFunction);
 
         function loveFunction() {
-            no_love.classList.toggle('move');
-            setTimeout(function() {
-                no_love.classList.remove('move');
-                var randomX = Math.floor(Math.random() * 400);
-                var randomY = Math.floor(Math.random() * 200);
-                no_love.style.transform = `translate(${randomX}px, ${randomY}px)`;
-            }, 10);
+            no_love.classList.add('move');
+            var maxX = box.clientWidth - no_love.clientWidth;
+            var maxY = box.clientHeight - no_love.clientHeight;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            no_love.style.transform = `translate(${randomX}px, ${randomY}px)`;
         }
     </script>
 </body>
