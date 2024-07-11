@@ -26,7 +26,7 @@
             height: 200px;
             overflow: hidden;
             background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
-            background-size: 400px 400px; /* Điều chỉnh kích thước hình nền gấp đôi */
+            background-size: contain; /* Đảm bảo hình ảnh không bị cắt mất */
         }
         button {
             border: none;
@@ -44,12 +44,12 @@
             opacity: 0.6;
         }
         #love {
-            top: 60%;
+            top: 30%;
             left: 30%;
         }
         #no-love {
             top: 60%;
-            left: 50%; /* Đặt vị trí ban đầu cho nút "Không Yêu" */
+            left: 60%; /* Đặt vị trí ban đầu cho nút "Không Yêu" */
         }
         span {
             text-align: center;
@@ -92,4 +92,3 @@
     </script>
 </body>
 </html>
-
