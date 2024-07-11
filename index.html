@@ -13,19 +13,19 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
-            background-size: contain; /* Sử dụng contain để hình ảnh vừa với màn hình */
+            background-size: cover;
         }
         .box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(255, 255, 255, 0.8); /* Xóa khung trắng */
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             position: relative;
-            width: 300px; /* Đặt kích thước cho khung */
-            height: 200px; /* Đặt kích thước cho khung */
-            overflow: hidden; /* Giữ nút bên trong khung */
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
         }
         button {
             border: none;
@@ -36,33 +36,35 @@
             outline: none;
             text-transform: uppercase;
             font-weight: bold;
-            margin: 5px;
             position: absolute;
         }
         button:hover {
             cursor: pointer;
             opacity: 0.6;
         }
+        #love {
+            top: 60%;
+            left: 30%;
+        }
+        #no-love {
+            top: 60%;
+            left: 50%; /* Đặt vị trí ban đầu cho nút "Không Yêu" */
+        }
         span {
             text-align: center;
-            display: block;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
             font-size: 20px;
             color: #000;
             text-transform: uppercase;
             font-weight: bold;
         }
-        .move {
-            transform: translate(0, 0);
-            transition: transform 0.1s;
-        }
     </style>
 </head>
 <body>
     <div class="box">
-        <span>Chúc Chị Ngân Sinh Nhật Vui Vẻ</span>
+        <span>Chúc Mừng Sinh Nhật Chị Ngân</span>
         <button id="love">A. Không Cảm Ơn</button>
-        <button id="no-love">B. Cảm Ơn Em Nhiều</button>
+        <button id="no-love">B. Cảm Ơn Em</button>
     </div>
 
     <script>
@@ -79,12 +81,12 @@
         no_love.addEventListener("mouseover", loveFunction);
 
         function loveFunction() {
-            no_love.classList.add('move');
             var maxX = box.clientWidth - no_love.clientWidth;
             var maxY = box.clientHeight - no_love.clientHeight;
             var randomX = Math.floor(Math.random() * maxX);
             var randomY = Math.floor(Math.random() * maxY);
-            no_love.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            no_love.style.left = randomX + 'px';
+            no_love.style.top = randomY + 'px';
         }
     </script>
 </body>
