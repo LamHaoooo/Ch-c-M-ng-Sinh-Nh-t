@@ -6,11 +6,10 @@
     <title>Love Box</title>
     <style>
         .box-love {
-            background: url('https://drive.google.com/uc?id=1Ed7VWXWHztwYipg8o0cnARXDjgXcpSz8');
+            background: url('https://trongrangimplant.vn/rs/?w=500&src=https://trongrangimplant.vn/wp-content/uploads/2019/01/rang-khenh-dep-12.jpg');
             width: 500px;
             height: 300px;
             position: relative;
-            background-size: cover;
         }
         .box {
             position: absolute;
@@ -40,7 +39,7 @@
             display: block;
             margin-bottom: 8px;
             font-size: 20px;
-            color: #000;
+            color: #fff;
             text-transform: uppercase;
             font-weight: bold;
         }
@@ -52,10 +51,10 @@
 </head>
 <body>
     <div class='box-love'>
-        <span>chị Ngân đãi văn phòng ăn nha</span>
+        <span>CHÚC MỪNG SINH NHẬT CHỊ NGÂN</span>
         <div class='box'>
-            <button id="love">Ok em , đi luôn</button>
-            <button id="no-love">Để chị xem lại đã</button>
+            <button id="love">không cần cảm ơn</button>
+            <button id="no-love">Cảm ơn em nhiều</button>
         </div>
     </div>
 
@@ -66,7 +65,7 @@
         love.addEventListener("click", myFunction);
 
         function myFunction() {
-            alert('Em biết mà, Em và anh chị cảm ơn chị Ngân nhiều hehehehe');
+            alert('Buồn chị Ngân :(((');
         }
 
         no_love.addEventListener("mouseover", loveFunction);
@@ -77,7 +76,7 @@
                 no_love.classList.remove('move');
                 var randomX = Math.floor(Math.random() * 400);
                 var randomY = Math.floor(Math.random() * 200);
-                no_love.style.transform = translate(${randomX}px, ${randomY}px);
+                no_love.style.transform = `translate(${randomX}px, ${randomY}px)`;
             }, 10);
         }
     </script>
