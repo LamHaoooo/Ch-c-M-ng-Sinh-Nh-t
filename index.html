@@ -28,6 +28,15 @@
             background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
             background-size: contain; /* Đảm bảo hình ảnh không bị cắt mất */
         }
+        .left-corner-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px; /* Điều chỉnh kích thước hình ảnh tại đây */
+            height: auto;
+            z-index: 1; /* Đảm bảo hình ảnh nằm trên nền */
+            opacity: 0.8; /* Điều chỉnh độ trong suốt của hình ảnh */
+        }
         button {
             border: none;
             border-radius: 4px;
@@ -66,6 +75,7 @@
         <span>Chúc mừng sinh nhật chị Ngân</span>
         <button id="love">A. Không Cảm Ơn</button>
         <button id="no-love">B. Cảm Ơn Em</button>
+        <img class="left-corner-image" src="https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620186336475_cb49d5290a1cf01bfa9ec69f2db5adce.jpg" alt="Left Corner Image">
     </div>
 
     <script>
