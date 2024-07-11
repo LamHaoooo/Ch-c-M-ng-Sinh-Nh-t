@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Box</title>
     <style>
+        body {
+            background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
         .box-love {
-            background: url('https://mithanco.com/vi/tin-tuc-su-kien/su-kien/du-minh-thanh-thong-bao-nghi-le-ngay-gio-to-hung-vuong-va-ngay-304---15-1.html');
             width: 500px;
             height: 300px;
             position: relative;
+            margin: 50px auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
         }
         .box {
             position: absolute;
@@ -21,7 +31,7 @@
             border-radius: 4px;
             padding: 8px;
             background: red;
-            color: #fff;
+            color: #000;
             outline: none;
             text-transform: uppercase;
             font-weight: bold;
@@ -39,7 +49,7 @@
             display: block;
             margin-bottom: 8px;
             font-size: 20px;
-            color: #000;
+            color: #fff;
             text-transform: uppercase;
             font-weight: bold;
         }
@@ -51,10 +61,10 @@
 </head>
 <body>
     <div class='box-love'>
-        <span>CHÚC MỪNG SINH NHẬT CHỊ NGÂN</span>
+        <span>Chúc Mừng Sinh Nhật Chị Ngân</span>
         <div class='box'>
-            <button id="love">không cần cảm ơn</button>
-            <button id="no-love">Cảm ơn em nhiều</button>
+            <button id="love">A. Không Cảm Ơn</button>
+            <button id="no-love">B. Cảm Ơn Em </button>
         </div>
     </div>
 
@@ -65,7 +75,7 @@
         love.addEventListener("click", myFunction);
 
         function myFunction() {
-            alert('Buồn chị Ngân :(((');
+            alert('Sao chị làm vậy huhuhu');
         }
 
         no_love.addEventListener("mouseover", loveFunction);
