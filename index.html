@@ -12,8 +12,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
-            background-size: cover;
+            background: rgba(255, 255, 255, 0.8);
         }
         .box {
             display: flex;
@@ -26,6 +25,8 @@
             width: 300px;
             height: 200px;
             overflow: hidden;
+            background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
+            background-size: 200px 200px; /* Điều chỉnh kích thước hình nền */
         }
         button {
             border: none;
@@ -62,9 +63,9 @@
 </head>
 <body>
     <div class="box">
-        <span>Chúc Mừng Sinh Nhật Chị Ngân</span>
-        <button id="love">A. Không Cảm Ơn</button>
-        <button id="no-love">B. Cảm Ơn Em</button>
+        <span>Bạn có yêu mình không</span>
+        <button id="love">Yêu</button>
+        <button id="no-love">Không Yêu</button>
     </div>
 
     <script>
@@ -75,7 +76,7 @@
         love.addEventListener("click", myFunction);
 
         function myFunction() {
-            alert('Sao chị làm vậy huhuhu');
+            alert('Mình Biết Mà ahihi');
         }
 
         no_love.addEventListener("mouseover", loveFunction);
