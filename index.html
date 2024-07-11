@@ -15,18 +15,28 @@
             background: rgba(255, 255, 255, 0.8);
         }
         .box {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
             position: relative;
             width: 300px;
             height: 400px; /* Tăng chiều cao khung để chứa hình ảnh lớn hơn và văn bản */
             overflow: hidden;
             background: url('https://raw.githubusercontent.com/LamHaoooo/HPBD.html/main/z5620402702935_2300ba6947077759b20ee05014271621.jpg') no-repeat center center;
             background-size: contain; /* Đảm bảo hình ảnh không bị cắt mất */
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .content {
+            position: absolute;
+            bottom: 20px; /* Điều chỉnh khoảng cách từ dưới lên */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            padding: 0 20px; /* Tạo khoảng cách lề cho nội dung */
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
         button {
             border: none;
@@ -37,17 +47,11 @@
             outline: none;
             text-transform: uppercase;
             font-weight: bold;
-            position: relative; /* Đặt vị trí tương đối để không bị ảnh hưởng bởi các thuộc tính vị trí của khung */
+            margin-bottom: 10px;
+            cursor: pointer;
         }
         button:hover {
-            cursor: pointer;
             opacity: 0.6;
-        }
-        #love {
-            margin-bottom: 10px; /* Thêm khoảng cách giữa các nút */
-        }
-        #no-love {
-            margin-bottom: 10px; /* Thêm khoảng cách giữa các nút */
         }
         span {
             text-align: center;
@@ -61,9 +65,11 @@
 </head>
 <body>
     <div class="box">
-        <span>Chúc mừng sinh nhật chị Ngân</span>
-        <button id="love">A. Không Cảm Ơn</button>
-        <button id="no-love">B. Cảm Ơn Em</button>
+        <div class="content">
+            <span>Chúc mừng sinh nhật chị Ngân</span>
+            <button id="love">A. Không Cảm Ơn</button>
+            <button id="no-love">B. Cảm Ơn Em</button>
+        </div>
     </div>
 
     <script>
